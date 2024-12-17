@@ -1,0 +1,146 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+input {
+  padding: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  width: 180px;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #f5f5f5;
+  border-color: #4CAF50;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  display: block;
+  object-fit: cover;
+  background-color: #e0e0e0; 
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 0.5rem;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-info p {
+  margin: 0.2rem 0;
+  color: #777;
+}
+
+.card-info .year {
+  color: #e2d4d0;
+}
+
+.card-info .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.card-info .rating span {
+  font-size: 1rem;
+  color: #FF7043;
+  margin-left: 0.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 601px) {
+  .card-container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+footer {
+  background-color: #2C3E50;
+  color: white;
+  padding: .1rem;
+  text-align: center;
+}
